@@ -1,0 +1,102 @@
+.d-none{
+  display: none !important;
+}
+.container{
+  width: 90%;
+  margin: auto;
+  padding: 10px 5px;
+}
+.container h2{
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #2C3E50;
+}
+.line{
+  width: 25%;
+  margin: auto;
+  background-color: #2C3E50;
+  height: 1px;
+  margin-bottom: 1.5rem;
+}
+.gallary{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  width: 100%;
+}
+.gallary_item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallary_item img{
+  width: 100%;
+  display: block;
+}
+
+.overlay{
+  position: absolute;
+  background-color: #2FAD94;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.overlay:hover{
+  opacity: 80%;
+}
+.overlay svg{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #2DB394;
+}
+
+.gallery_modal{
+  position: sticky;
+  z-index: 9999;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #2c3e50c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_image_container{
+  width: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.modal_image_container img{
+  width: 100%;
+}
+
+
+@media screen and (max-width:850px){
+  .gallary{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .modal_image_container{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:700px){
+  .gallary{
+    grid-template-columns: repeat(1,1fr);
+    width: 90%;
+    margin: auto;
+  }
+}
